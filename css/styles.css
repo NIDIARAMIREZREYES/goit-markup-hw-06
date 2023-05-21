@@ -1,0 +1,572 @@
+:root {
+  --brand-color: #2196f3;
+}
+
+body {
+  font-family: "Roboto", Courier, monospace;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-container {
+  display: flex;
+  padding: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Logo */
+
+.WebStudio {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.1;
+  text-align: right;
+  color: var(--brand-color);
+  margin-right: 93px;
+}
+
+/* menu */
+nav ul li {
+  position: relative;
+}
+
+.button.active::after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 4px;
+  left: 0px;
+  top: 49px;
+  background: var(--brand-color);
+  border-radius: 2px;
+}
+
+.button {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  font-size: 14px;
+  line-height: 16px;
+  color: #212121;
+  margin-right: 50px;
+}
+.active {
+  color: var(--brand-color);
+}
+.button:hover {
+  color: var(--brand-color);
+}
+
+/* contacto*/
+
+.infocontact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacto a {
+  float: right;
+}
+
+.contacto a:hover,
+.contacto a:hover + a svg {
+  color: #2196f3;
+  fill: #2196f3;
+}
+
+.date {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.icon-email {
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+  fill: #757575;
+}
+
+.icon-phone {
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
+  margin-left: 25px;
+  fill: #757575;
+}
+
+/* Nuestro contenido seccion */
+
+.background {
+  height: 600px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/people.jpg");
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.firsttitle {
+  width: 696px;
+  height: 120px;
+
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.3;
+  /* or 136% */
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
+
+.buttontitle {
+  border: 5px solid var(--brand-color);
+  background: var(--brand-color);
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 1.9;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(0, 0%, 0%, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.backdrop.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.modal-form {
+  background-color: #ffffff;
+  width: 528px;
+  height: 581px;
+  opacity: 1;
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+  opacity: transform cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  transform: translateY(0);
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border-radius: 4px;
+  padding: 40px;
+  position: absolute;
+}
+
+.modal-form.is-hidden {
+  transform: translateY(200px);
+  opacity: 0;
+}
+
+.close-button {
+  box-sizing: border-box;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  cursor: pointer ;
+  font-size: 16px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.position{
+  position: relative;
+}
+
+.modal-style {
+  display: block;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 40px;
+  width: 100%;
+  padding-left: 40px;
+}
+
+.modal-style:focus, .modal-style:hover {
+border: 1px solid var(--brand-color);
+}
+
+.modal-svg {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  fill: #212121;
+}
+
+.modal-style:focus + .modal-svg,
+.modal-style:hover + .modal-svg {
+  fill: var(--brand-color);
+}
+
+/* beneficios seccion */
+
+.benefits-container {
+  display: flex;
+  padding-top: 95px;
+  justify-content: space-between;
+}
+.title {
+  font-family: "Roboto";
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #212121;
+  margin: 24px;
+}
+
+.text {
+  display: block;
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 1.7;
+  /* or 171% */
+  color: #757575;
+  margin: 24px;
+}
+
+/* A que nos dedicamos seccion */
+
+.secondtitle {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+  color: #212121;
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.image-container {
+  position: relative;
+}
+.image-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+  padding: 27px;
+  margin: 0;
+}
+
+/* Nuestro equipo */
+
+.background-team {
+  background: #f5f4fa;
+}
+.team-section {
+  padding-bottom: 94px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.team-images {
+  box-sizing: border-box;
+  width: 270px;
+  height: 428px;
+  left: 215px;
+  top: 1785px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.person-image {
+  display: block;
+}
+.nametitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  /* identical to box height */
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+.description {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 1.1;
+  /* or 171% */
+
+  color: #757575;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0px;
+  padding: 0px 32px;
+}
+
+.icon-redes {
+  height: 20px;
+  width: 20px;
+}
+
+.logo-redes {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  fill: #afb1b8;
+  border-radius: 50px;
+}
+.logo-redes:hover {
+  background-color: var(--brand-color);
+}
+.logo-redes:hover {
+  fill: #eeeeee;
+}
+
+/* Nuestros clientes */
+
+.customers {
+  padding-bottom: 94px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icon-items {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 94px;
+}
+.icon-customer {
+  box-sizing: border-box;
+  width: 170px;
+  height: 81px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.icon-svg {
+  margin-top: 14px;
+  margin-left: 32px;
+  fill: #afb1b8;
+  /* Color inicial del ícono */
+}
+.icon-items:hover .icon-svg {
+  fill: var(--brand-color);
+  /* Color al hacer hover */
+}
+.icon-customer:hover {
+  border-color: var(--brand-color);
+}
+
+/* footer seccion*/
+
+.footer {
+  background: #2f303a;
+}
+.backgrounddate {
+  height: 252px;
+  padding: 95px 0;
+}
+address {
+  font-style: normal;
+}
+.address {
+  display: flex;
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 1.7;
+  /* or 171% */
+  color: #ffffff;
+}
+.style {
+  display: flex;
+  flex-direction: column;
+}
+.email {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 24px;
+  /* or 171% */
+  color: rgba(255, 255, 255, 0.6);
+}
+.secondphone {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 1.7;
+  /* or 171% */
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.find {
+  display: flex;
+  flex-direction: column;
+  align-content: space-evenly;
+  margin-left: 130px;
+}
+.find-title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.icon-find {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 5px;
+}
+.find-redes {
+  height: 20px;
+  width: 20px;
+}
+.icon-find:hover {
+  background-color: var(--brand-color);
+}
+
+.address-find-container {
+  display: flex;
+}
+
+/* Portafolio */
+/* Botones menu seccion */
+
+.buttonmenu {
+  display: flex;
+  padding: 24px;
+  justify-content: center;
+}
+.menu {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #212121;
+  background: #f5f4fa;
+  border-radius: 4px;
+  border: 0;
+  padding: 6px 24px;
+  margin-right: 8px;
+}
+.menu:hover {
+  background-color: var(--brand-color);
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.button-active {
+  color: #ffffff;
+  background-color: var(--brand-color);
+}
+/* Imagenes */
+
+.picture-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+  padding-bottom: 90px;
+}
+.picture {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+.picture-card {
+  position: relative;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+}
+.picture-card:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.poster {
+  display: block;
+}
+
+.text-image {
+  position: absolute;
+  top: 0;
+  height: 294px;
+  width: 370px;
+  background: rgba(33, 150, 243, 0.9);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #ffffff;
+  padding: 63px 24px;
+  transform: translateY(105%);
+}
+
+.picture-card:hover .text-image {
+  transform: translateY(0%);
+  transition: transform 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animation {
+  position: relative;
+  overflow: hidden;
+}
