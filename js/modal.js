@@ -7,17 +7,22 @@
   };
 
   refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
-  refs.backdrop.addEventListener("click", handleClickOutside);
+  refs.closeModalBtn.addEventListener("click", closeModal);
 
   function toggleModal() {
     refs.backdrop.classList.toggle("is-hidden");
     refs.modal.classList.toggle("is-hidden");
   }
 
-  function handleClickOutside(event) {
-    if (event.target === refs.backdrop) {
-      toggleModal();
-    }
+  function closeModal() {
+    toggleModal();
+    deactivateRequired();
+  }
+
+  function deactivateRequired() {
+    const inputElements = document.querySelectorAll("[required]");
+    inputElements.forEach((input) => {
+      input.required = false;
+    });
   }
 })();

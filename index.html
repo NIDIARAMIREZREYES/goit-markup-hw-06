@@ -66,27 +66,82 @@
 
     <!-- Nuestro contenido seccion -->
     <main>
+      <!-- backdrop y ventana modal -->
+
       <section class="backdrop is-hidden" data-backdrop>
         <form action="" class="modal-form is-hidden" data-modal>
-          <button class="close-button" data-modal-close>x</button>
-          <h3>Deje sus datos, nos contactaremos con usted</h3>
+          <button class="close-button" data-modal-close>X</button>
+          <h2>Deje sus datos, nos contactaremos con usted</h2>
+
           <label for="input-name"> Nombre </label>
           <div class="position">
             <input
               class="modal-style"
               type="text"
               name="name"
-              id="input-name" required
+              id="input-name"
+              required
             />
             <svg class="modal-svg">
               <use href="./images/icon.svg/Sprite.svg#persona"></use>
             </svg>
           </div>
 
-          <button type="submit">Enviar</button>
+          <label for="input-phone"> Telefono </label>
+          <div class="position">
+            <input
+              class="modal-style"
+              type="text"
+              name="phone"
+              id="input-phone"
+              required
+            />
+            <svg class="modal-svg">
+              <use href="./images/icon.svg/Sprite.svg#telefono2"></use>
+            </svg>
+          </div>
+
+          <label for="input-e-mail"> E-mail </label>
+          <div class="position">
+            <input
+              class="modal-style"
+              type="email"
+              name="e-mail"
+              id="input-e-mail"
+              required
+            />
+            <svg class="modal-svg">
+              <use href="./images/icon.svg/Sprite.svg#sobre2"></use>
+            </svg>
+          </div>
+
+          <label for="input-comment">
+            Comentarios
+            <textarea
+              name="comment"
+              placeholder="Introduzca el texto"
+            ></textarea>
+          </label>
+
+          <label for="verification" class="check">
+            Estoy de acuerdo con el boletín informativo y acepto los Términos y
+            Condiciones
+            <input
+              class="check-input"
+              type="checkbox"
+              name="verification"
+              id="verification"
+            />
+            <svg class="check-svg">
+              <use href="./images/icon.svg/Sprite.svg#casilla"></use>
+            </svg>
+
+            <button type="submit" class="submit">Enviar</button>
+          </label>
         </form>
       </section>
 
+      <!-- background-->
       <section class="background">
         <div class="container hero-container">
           <h1 class="firsttitle">SOLUCIONES EFICACES PARA SU NEGOCIO</h1>
@@ -423,7 +478,7 @@
 
     <footer class="footer">
       <section class="container backgrounddate">
-        <div class="address-find-container">
+        <div class= "footer-container">
           <div>
             <a class="WebStudio" href="#">Webstudio</a>
             <address>
@@ -462,6 +517,7 @@
               </ul>
             </address>
           </div>
+          
           <div class="find">
             <p class="find-title">ENCUENTRENOS EN</p>
 
@@ -495,6 +551,35 @@
                 </a>
               </li>
             </ul>
+          </div>
+
+          <div class="footer-subscription">
+            <form action="">
+              <p class="find-title">SUSCRÍBASE AL BOLETIN INFORMATIVO</p>
+             <ul>
+              <li>
+              <label for="subscription" class="subscription">
+                
+                <input
+                  class="input-subscription"
+                  type="text"
+                  name="subscription"
+                  id="subscription"
+                  placeholder="Correo electrónico"
+                />
+              </label>
+              </li>
+              <li>
+              <button type="submit" class="button-send">
+                Suscríbase
+                <svg class="send-svg">
+                  <use href="./images/icon.svg/Sprite.svg#enviar"></use>
+                </svg>
+              </button>
+              </li>
+              </ul>
+            </form>
+           
           </div>
         </div>
       </section>

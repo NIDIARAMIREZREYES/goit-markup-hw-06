@@ -1,5 +1,7 @@
 :root {
   --brand-color: #2196f3;
+  --white-color: #FFFFFF;
+  --black-color: #212121;
 }
 
 body {
@@ -67,7 +69,7 @@ nav ul li {
   letter-spacing: 0.02em;
   font-size: 14px;
   line-height: 16px;
-  color: #212121;
+  color: var(--black-color);
   margin-right: 50px;
 }
 .active {
@@ -90,8 +92,8 @@ nav ul li {
 
 .contacto a:hover,
 .contacto a:hover + a svg {
-  color: #2196f3;
-  fill: #2196f3;
+  color: var(--brand-color);
+  fill: var(--brand-color);
 }
 
 .date {
@@ -148,7 +150,7 @@ nav ul li {
 
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--white-color);
   text-align: center;
 }
 
@@ -159,8 +161,10 @@ nav ul li {
   font-size: 16px;
   line-height: 1.9;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--white-color);
 }
+
+ /* backdrop y ventana modal */
 
 .backdrop {
   display: flex;
@@ -184,7 +188,7 @@ nav ul li {
 }
 
 .modal-form {
-  background-color: #ffffff;
+  background-color: var(--white-color);
   width: 528px;
   height: 581px;
   opacity: 1;
@@ -208,13 +212,26 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
   position: absolute;
   top: 10px;
   right: 10px;
+  width: 30px;
+    height: 30px;
   border: none;
   cursor: pointer ;
   font-size: 16px;
-  background: #ffffff;
+  background: var(--white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
+
+.close-button:hover {
+  color: var(--brand-color);
+}
+
+.modal-form h2 {
+font-size: 20px;
+text-align: center;
+margin: 0px 0px 12px 0px;
+} 
+
 
 .position{
   position: relative;
@@ -228,6 +245,7 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
   height: 40px;
   width: 100%;
   padding-left: 40px;
+  margin: 4px 0px 10px 0px;
 }
 
 .modal-style:focus, .modal-style:hover {
@@ -235,18 +253,89 @@ border: 1px solid var(--brand-color);
 }
 
 .modal-svg {
-  width: 12px;
-  height: 12px;
+  width: 15px;
+  height: 14px;
   position: absolute;
   top: 14px;
   left: 15px;
-  fill: #212121;
+  fill: var(--black-color);
 }
 
 .modal-style:focus + .modal-svg,
-.modal-style:hover + .modal-svg {
+.modal-style:hover + .modal-svg
+ {
   fill: var(--brand-color);
 }
+textarea:focus, textarea:hover {
+  border-color: var(--brand-color);
+}
+
+textarea {
+display: block;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  width: 100%;
+  height: 120px;
+  padding-left: 15px;
+margin: 4px 0px 10px 0px;
+}
+
+.check {
+  position: relative;
+  display: block;
+  width: 400.62px;
+    height: 24px;
+   padding-left: 35px;
+   margin-bottom: 7px;
+  margin-top: 20px;
+  color: #757575;
+}
+
+.check-input {
+position: absolute;
+  top: 0;
+  left: 15px;
+ opacity: 0;
+}
+
+.check-svg {
+  position: absolute;
+  width: 16px;
+    height: 15px;
+    top: 0;
+    left: 15px;
+    fill: var(--black-color);
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.check-input:checked + .check-svg {
+  background-color: var(--brand-color);
+  fill: var(--brand-color);
+  background-image: url(../images/icon.svg/check.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.submit {
+  position: absolute;
+  display:block;
+ 
+    background: var(--brand-color);
+    border-color: var(--brand-color);
+    color: var(--white-color);
+    border-radius: 4px;
+    width: 200px;
+    height: 50px;
+    left: 123px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+margin: 10px 0px 0px 10px;
+}
+
+
+
 
 /* beneficios seccion */
 
@@ -260,7 +349,7 @@ border: 1px solid var(--brand-color);
   font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
-  color: #212121;
+  color: var(--black-color);
   margin: 24px;
 }
 
@@ -282,7 +371,7 @@ border: 1px solid var(--brand-color);
   font-size: 36px;
   line-height: 1.1;
   text-align: center;
-  color: #212121;
+  color: var(--black-color);
   padding-top: 94px;
   padding-bottom: 50px;
 }
@@ -300,7 +389,7 @@ border: 1px solid var(--brand-color);
   left: 0;
   width: 100%;
   text-align: center;
-  color: #ffffff;
+  color: var(--white-color);
   background-color: rgba(47, 48, 58, 0.8);
   padding: 27px;
   margin: 0;
@@ -322,7 +411,7 @@ border: 1px solid var(--brand-color);
   height: 428px;
   left: 215px;
   top: 1785px;
-  background: #ffffff;
+  background: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -339,7 +428,7 @@ border: 1px solid var(--brand-color);
   text-align: center;
   /* identical to box height */
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--black-color);
 }
 .description {
   font-family: "Roboto";
@@ -421,6 +510,13 @@ border: 1px solid var(--brand-color);
   height: 252px;
   padding: 95px 0;
 }
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 address {
   font-style: normal;
 }
@@ -430,7 +526,7 @@ address {
   font-weight: 400;
   line-height: 1.7;
   /* or 171% */
-  color: #ffffff;
+  color: var(--white-color);
 }
 .style {
   display: flex;
@@ -452,17 +548,18 @@ address {
   color: rgba(255, 255, 255, 0.6);
 }
 
+
+
 .find {
-  display: flex;
-  flex-direction: column;
-  align-content: space-evenly;
+  position: relative;
+    right: 160px;
   margin-left: 130px;
 }
 .find-title {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 14px;
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .icon-find {
@@ -487,6 +584,58 @@ address {
   display: flex;
 }
 
+.footer-subscription{
+  position: relative;
+right: 220px;
+}
+
+.subscription {
+ position: relative;
+ display: block;
+}
+
+.input-subscription {
+  box-sizing: border-box;
+    width: 358px;
+    height: 50px;
+    left: 815px;
+    top: 2787px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+  background: #2F303A;
+  outline: none;
+  margin-right: 12px;
+  color: var(--white-color);
+}
+.input-subscription:focus, .input-subscription:hover{
+  border-color: var(--brand-color);
+}
+.button-send {
+  position: absolute;
+    width: 200px;
+    height: 50px;
+    background: var(--brand-color);
+    color: #eeeeee;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  font-size: 16px;
+    line-height: 30px;
+    display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 39px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      outline: none;
+}
+.send-svg {
+  margin-left: 20px;
+  width:24px ;
+  height: 24px;
+
+}
+
 /* Portafolio */
 /* Botones menu seccion */
 
@@ -500,7 +649,7 @@ address {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
-  color: #212121;
+  color: var(--black-color);
   background: #f5f4fa;
   border-radius: 4px;
   border: 0;
@@ -509,14 +658,14 @@ address {
 }
 .menu:hover {
   background-color: var(--brand-color);
-  color: #ffffff;
+  color: var(--white-color);
   cursor: pointer;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button-active {
-  color: #ffffff;
+  color: var(--white-color);
   background-color: var(--brand-color);
 }
 /* Imagenes */
@@ -535,7 +684,7 @@ address {
 .picture-card {
   position: relative;
   box-sizing: border-box;
-  background: #ffffff;
+  background: var(--white-color);
   border: 1px solid #eeeeee;
 }
 .picture-card:hover {
@@ -555,7 +704,7 @@ address {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  color: #ffffff;
+  color: var(--white-color);
   padding: 63px 24px;
   transform: translateY(105%);
 }
