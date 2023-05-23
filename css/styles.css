@@ -517,6 +517,10 @@ margin: 10px 0px 0px 10px;
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.footer-date {
+  margin-left: 20px;
+}
 address {
   font-style: normal;
 }
@@ -553,7 +557,7 @@ address {
 .find {
   position: relative;
     right: 160px;
-  margin-left: 130px;
+  margin-left: 95px;
 }
 .find-title {
   font-family: "Roboto";
