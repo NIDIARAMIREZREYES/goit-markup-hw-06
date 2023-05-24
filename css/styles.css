@@ -52,10 +52,13 @@ p {
 }
 
 /* menu */
+nav ul {
+  display: flex;
+  align-items: center;
+}
 nav ul li {
   position: relative;
 }
-
 .button.active::after {
   content: "";
   position: absolute;
